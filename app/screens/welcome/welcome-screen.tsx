@@ -13,7 +13,7 @@ import {
 import { color, spacing, typography } from "../../theme"
 import { NavigatorParamList } from "../../navigators"
 
-const bowserLogo = require("./bowser.png")
+const wragbyLogo = require("./Wragby.png")
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
@@ -62,6 +62,13 @@ const BOWSER: ImageStyle = {
   width: 343,
   height: 230,
 }
+const HOMR_LOGO: ImageStyle = {
+  alignSelf: "center",
+  marginVertical: spacing[5],
+  maxWidth: "100%",
+  width: 200,
+  height: 60,
+}
 const CONTENT: TextStyle = {
   ...TEXT,
   color: "#BAB6C8",
@@ -92,23 +99,22 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
 
     return (
       <View testID="WelcomeScreen" style={FULL}>
-        <GradientBackground colors={["#422443", "#281b34"]} />
+        <GradientBackground colors={["#422443", "#fff"]} />
         <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
           <Header headerTx="welcomeScreen.poweredBy" style={HEADER} titleStyle={HEADER_TITLE} />
+          <Image source={wragbyLogo} style={HOMR_LOGO} />
           <Text style={TITLE_WRAPPER}>
-            <Text style={TITLE} text="Your new app, " />
-            <Text style={ALMOST} text="almost" />
-            <Text style={TITLE} text="!" />
+            <Text style={ALMOST} text="Business Solutions" />
           </Text>
           <Text style={TITLE} preset="header" tx="welcomeScreen.readyForLaunch" />
-          <Image source={bowserLogo} style={BOWSER} />
+          <Text style={CONTENT}>Business applications that suit your specific business needs.</Text>
           <Text style={CONTENT}>
-            This probably isn't what your app is going to look like. Unless your designer handed you
-            this screen and, in that case, congrats! You're ready to ship.
-          </Text>
-          <Text style={CONTENT}>
-            For everyone else, this is where you'll see a live preview of your fully functioning app
-            using Ignite.
+            This team delivers Business Applications (Microsoft Dynamics 365, SAP, Oracle, SAGE and
+            various proprietary solutions) to our customers using the Wragby business solutions
+            delivery framework. This framework allows the unit to accurately analyze customers’
+            business requirements and needs through the Business Solutions delivery methodology that
+            pertains to each solution. This is to ensure the solution design and deployment meet
+            customer standards..
           </Text>
         </Screen>
         <SafeAreaView style={FOOTER}>

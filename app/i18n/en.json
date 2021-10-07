@@ -8,8 +8,8 @@
     "invalidEmail": "Invalid email address."
   },
   "welcomeScreen": {
-    "poweredBy": "POWERED BY IGNITE",
-    "readyForLaunch": "Ready for launch.",
+    "poweredBy": "Wwelcome!",
+    "readyForLaunch": "SAP",
     "continue": "CONTINUE"
   },
   "demoScreen": {
